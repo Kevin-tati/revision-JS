@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .container {
+                max-width: 500px;
+                margin-top: 50px;
+            }
+
+            h1 {
+                margin: center;
+            }
+
+            .fa-flask {
+                padding-right: 10px;
+            }
+
+            blockquote {
+                margin-bottom: 40px;
+                padding: 40px;
+                font-size: 28px;
+                background-color:green;
+            }
+
+            .quote {
+                height: auto;
+            }
+
+            .btn {
+                width: 100%;
+                height: 50px;
+                position: center;
+                font-size: 20px;
+            }
+
+            button#generer{
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container text-center">
+            <h1>Générateur de citations</h1>
+            <blockquote>
+                <p class="quote">Citations</p>
+            </blockquote>
+        
+            <button id="generer" class="btn btn-large btn-success"><i class="fa fa-flask"></i>Générer</button>
+        
+        </div>
+      
+        <script>
+            const proverbe  = ["La gazelle n'est pas la femme du porquepic"," Quand la Jirafe bois de l'eau elle ne porte pas de lunnette", "l'experience prouve que ... "," on ne nourrit pas la poule le jour du marché"];
+            let aleatoire = null;
+            
+            document.getElementById('generer').addEventListener("click", function() {
+                aleatoire = Math.floor(Math.random() * proverbe.length);
+                document.querySelector('.quote').innerHTML = proverbe[aleatoire];
+            });
+        </script>
+    </body>
+</html>

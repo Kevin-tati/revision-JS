@@ -22,13 +22,6 @@
                 padding-right: 10px;
             }
 
-            blockquote {
-                margin-bottom: 40px;
-                padding: 40px;
-                font-size: 28px;
-                background-color:green;
-            }
-
             .quote {
                 height: auto;
             }
@@ -62,6 +55,7 @@
             
             document.getElementById('generer').addEventListener("click", function() {
                 aleatoire = Math.floor(Math.random() * proverbe.length);
+                alert(proverbe[aleatoire]);
                 document.querySelector('.quote').innerHTML = proverbe[aleatoire];
             });
         </script>

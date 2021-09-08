@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EXO1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       
+        
+        <script>
+            let alphabet ="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN1234567890!@#$%&*/\?";
+            //taille_mdp correspond a la taille de la chaine de charactere qu'on souhaite generer
+            function generateurDeMotDePasse(taille_mdp){ 
+                tmp="";
+                for(var i=0; i< taille_mdp; i++){
+                    tmp+=alphabet.charAt(Math.floor(Math.random() * alphabet.length))
+                }
+                return tmp;
+            }
+
+            console.log(generateurDeMotDePasse(12));
+        </script>
+    </body>
+</html>

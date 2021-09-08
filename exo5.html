@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.dropbtn {
+  background-color:red;
+  color: black;
+  padding: 20px;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color:red;
+}
+
+.dropdown {
+  position: absolute;
+  top: 130px;
+  right: 60px;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: right;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.affichage {display: block;}
+
+p{
+  text-align: right;
+}
+
+h2{
+  text-align: center
+}
+
+</style>
+</head>
+<body>
+
+<h2>Menu burger</h2>
+<p>Clique pour ouvrir le menu deroulant.</p>
+
+
+<div class="dropdown">
+  <button onclick="myFunction()" class=" btn dropbtn"><i class="fa fa-bars"></i></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Home">Home</a>
+    <a href="Contact">Contact</a>
+    <a href="About">About</a>
+    <a href="J'aime pas"> J'aime pas le JS</a>>
+  </div>
+</div>
+
+<script>
+/* fonction pour basculer entre afficher et masquer le contenu du menu*/
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("affichage");
+}
+
+// ferme le menu si clique en dehors du menu
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('affichage')) {
+        openDropdown.classList.remove('affichage');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
